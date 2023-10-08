@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './app';
-import './index.css'
+import './components/index.css'
+import 'bootstrap/dist/css/bootstrap.css'
 // const header = <h1>This is my first React App</h1>
 
 // console.log(header);
