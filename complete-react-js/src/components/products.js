@@ -1,5 +1,9 @@
 let productCount = 0;
 let imageURL = require("../components/images/pngegg (1).png");
+let isAvailable = 'Unavailable';
+
+let badgeClass = 'badge-margin-left-240 badge ';
+badgeClass += isAvailable === 'Available' ? 'bg-success' : 'bg-danger';
 
 
 function displayFormattedProductCount(){
@@ -17,8 +21,9 @@ function Products() {
                                 <button className=" btn btn-primary">-</button>
                                 <span style={ {padding: '0px 20px','font-size': 15} }>{displayFormattedProductCount()}</span>
                                 <button className=" btn btn-primary">+</button>
+                                <span className={badgeClass}>{isAvailable}</span>
                             </div>
-                        </div><img src={imageURL} alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2" />
+                        </div><img src={imageURL} alt="Generic placeholder image" width="130" class="ml-lg-5 order-1 order-lg-2" />
                     </div>
                 </li>
             </ul>
