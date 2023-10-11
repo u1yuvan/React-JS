@@ -17,7 +17,7 @@ function Products(props) {
                             <p className="font-italic text-muted mb-0 small">{props.description}</p>
                             <ProductDetails price={props.price} isAvailable={props.isAvailable}> 
                             </ProductDetails>
-                        </div><img src={props.imageUrl} alt="Generic placeholder image" width="100" class="ml-lg-5 order-1 order-lg-2" />
+                        </div><img src={props.imageUrl} alt="Generic placeholder image" width="100" className="ml-lg-5 order-1 order-lg-2" />
                     </div>
                 </li>
         
