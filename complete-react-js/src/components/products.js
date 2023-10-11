@@ -1,4 +1,4 @@
-import ProductDetails from "./ProductDetails";
+import ProductDetails from "../Components/ProductDetails";
 
 
 // let imageURL = require("../Components/images/pngegg (1).png");
@@ -13,7 +13,8 @@ function Products(props) {
                         <div className="media-body order-2 order-lg-1">
                             <h5 className="mt-0 font-weight-bold mb-2">{props.name}</h5>
                             <p className="font-italic text-muted mb-0 small">{props.description}</p>
-                            <ProductDetails price={props.price} isAvailable={props.isAvailable} />
+                            <ProductDetails price={props.price} isAvailable={props.isAvailable}> 
+                            </ProductDetails>
                         </div><img src={props.imageUrl} alt="Generic placeholder image" width="100" class="ml-lg-5 order-1 order-lg-2" />
                     </div>
                 </li>
