@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Button from "./Button";
 
 
@@ -8,20 +8,23 @@ function ProductDetails(props){
     let badgeClass = 'badge-margin-left-240 badge ';
     badgeClass += props.isAvailable ? 'bg-success' : 'bg-danger';
 
-    let productCount = 0;
-
+    // let productCount = 0;
+    let [productCount, upadeCount] = useState(0)
+ 
 function displayFormattedProductCount() {
     return productCount > 0 ? productCount : 'Zero';
 }
 
     let  incrementProductCount= function(){
-        productCount++;
-        console.log(productCount);
+        // productCount++;
+        // console.log(productCount);
+        upadeCount(++productCount)
     }
     
     let  decrementProductCount= function(){
-        productCount--;
-        console.log(productCount);
+        // productCount--;
+        // console.log(productCount);
+        upadeCount(--productCount)
     }
     
     return (
