@@ -2,31 +2,59 @@ import React,{useState} from "react";
 
 
 function ProductForm() {
-     let [pName, updateName] = useState('')
-     let [pPrice, updatePrice] = useState('')
-     let [pDescription, updateDescription] = useState('')
-     let [pAvailability, updateAvailability] = useState('')
-     let [pImage, updateImage] = useState('')
+//      let [pName, updateName] = useState('')
+//      let [pPrice, updatePrice] = useState('')
+//      let [pDescription, updateDescription] = useState('')
+//      let [pAvailability, updateAvailability] = useState('')
+//      let [pImage, updateImage] = useState('')
+
+let [userInput, updateUserInput] = useState({
+      pName: '',
+      pPrice: '',
+      pDescription: '',
+      pAvailability: '',
+      pImage: '',
+});
      
 
       function nameInputHandler(event){
-            updateName(event.target.value);
+            // updateName(event.target.value); 
+            updateUserInput({
+                  ...userInput,
+                  pName: event.target.value
+            })
       }
 
       function priceInputHandler(event){
-            updatePrice(event.target.value);
+            // updatePrice(event.target.value);
+            updateUserInput({
+                  ...userInput,
+                  pPrice: event.target.value
+            })
       }
 
       function descriptionInputHandler(event){
-            updateDescription(event.target.value);
+            // updateDescription(event.target.value);
+            updateUserInput({
+                  ...userInput,
+                  pDescription: event.target.value
+            })
       }
 
       function availabilityInputHandler(event){
-            updateAvailability(event.target.value);
+            // updateAvailability(event.target.value);
+            updateUserInput({
+                  ...userInput,
+                  pAvailability: event.target.value
+            })
       }
 
       function imageInputHandler(event){
-            updateImage(event.target.value);
+            // updateImage(event.target.value);
+            updateUserInput({
+                  ...userInput,
+                  pImage: event.target.value
+            })
       }
 
       return (
