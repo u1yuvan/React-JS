@@ -18,7 +18,7 @@ function ProductForm() {
      
 
       function nameInputHandler(event){
-           // updateName(event.target.value); 
+           updateName(event.target.value); 
             // updateUserInput({
             //       ...userInput,
             //       pName: event.target.value
@@ -61,8 +61,21 @@ function ProductForm() {
             // })
       }
 
+      function createProductEventHandler(event) {
+        event.preventDefault();
+        let product = {pID: 1,
+            pName: pName,
+            desc: pDescription,
+            isAvailable: Boolean(pAvailability),
+            image: pImage,
+            price: Number(pPrice)
+      }
+      console.log(product);
+
+      }
+
       return (
-      <form className="row g-3">
+      <form className="row g-3" onSubmit={createProductEventHandler}>
         <div className="col-md-6">
         <label for="name">Product Name</label>
         <input type="text"
