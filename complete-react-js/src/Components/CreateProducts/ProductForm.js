@@ -5,7 +5,7 @@ function ProductForm() {
      let [pName, updateName] = useState('')
      let [pPrice, updatePrice] = useState('')
      let [pDescription, updateDescription] = useState('')
-     let [pAvailability, updateAvailability] = useState('')
+     let [pAvailability, updateAvailability] = useState(false)
      let [pImage, updateImage] = useState('')
 
 // let [userInput, updateUserInput] = useState({
@@ -70,6 +70,15 @@ function ProductForm() {
             image: pImage,
             price: Number(pPrice)
       }
+
+      updateName('')
+      updatePrice('')
+      updateDescription('')
+      updateAvailability(false)
+      updateImage('')
+
+
+
       console.log(product);
 
       }
@@ -81,7 +90,8 @@ function ProductForm() {
         <input type="text"
         className="form-control"
         id="name"
-        placeholder="Product Name" 
+        placeholder="Product Name"
+        value={pName} 
         onChange={nameInputHandler}/>
         
         </div>
@@ -92,6 +102,7 @@ function ProductForm() {
         className="form-control"
         id="price" 
         placeholder="Product Price"
+        value={pPrice}
         onChange={priceInputHandler} />
         </div>
 
@@ -101,11 +112,13 @@ function ProductForm() {
         className="form-control"
         id="description"
         placeholder="Product Description" 
+        value={pDescription}
         onChange={descriptionInputHandler}/>
         </div>
 
         <div className="form-check form-switch">
         <input className="form-check-input" type="checkbox" role="switch" id="isAvailable"
+        checked={pAvailability}
         onChange={availabilityInputHandler} />
         <label className="form-check-label" for="isAvailable">Is product available in stock?</label>
         </div>
@@ -113,6 +126,7 @@ function ProductForm() {
         <div className="form-group">
         <label for="select-image">Select product image</label>
         <input type="file" className="form-control" id="select-image"
+        value={pImage}
         onChange={imageInputHandler} />
         </div>
 
