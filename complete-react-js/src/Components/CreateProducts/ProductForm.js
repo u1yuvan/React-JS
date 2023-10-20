@@ -83,6 +83,7 @@ function ProductForm(props) {
 
       // console.log(product);
       props.createProduct(product)
+      props.onCancel();
 
       }
 
@@ -134,6 +135,7 @@ function ProductForm(props) {
         </div>
 
         <button type="submit" className="btn btn-primary"> Add Product</button>
+        <button type="button" onClick={props.onCancel}>Cancel</button>
   </form>    
       );  
 }
