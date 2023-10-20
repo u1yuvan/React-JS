@@ -6,9 +6,7 @@ import Products from './Products';
 
 function ProductList(props) {
   // console.log(props.newProduct);
-  return <div className=' row'>
-    <div className=' col-lg-8 mx-auto'>
-      <ul className="list-group shadow">
+  return       <ul className="list-group shadow">
         {
           props.newProductList.map((products) => {
             return <Products
@@ -23,8 +21,6 @@ function ProductList(props) {
           })}
 
       </ul>
-    </div>
-  </div>;
 }
 
 
