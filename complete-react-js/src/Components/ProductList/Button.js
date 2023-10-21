@@ -4,7 +4,7 @@ import React from 'react';
 
 function Button(props) {
     console.log("button component executed");
-    return <button onClick={props.eventHandler} className=" btn btn-primary">{props.children}</button>
+    return <button onClick={props.eventHandler} className=" btn btn-primary" disabled={props.disable}>{props.children}</button>
 }
 
 
